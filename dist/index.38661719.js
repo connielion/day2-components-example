@@ -22739,33 +22739,34 @@ var _button2Default = parcelHelpers.interopDefault(_button2);
 var _button1 = require("./components/Button1"); // a function component
 var _button1Default = parcelHelpers.interopDefault(_button1);
 var _appCss = require("./App.css");
+// Arrow function way
 const App = ()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/App.js",
-            lineNumber: 9
+            lineNumber: 10
         },
         __self: undefined,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h1", {
                 __source: {
                     fileName: "src/App.js",
-                    lineNumber: 10
+                    lineNumber: 11
                 },
                 __self: undefined,
-                children: "This App.js"
+                children: "This is App"
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_button1Default.default, {
                 __source: {
                     fileName: "src/App.js",
-                    lineNumber: 11
+                    lineNumber: 12
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_button2Default.default, {
                 __source: {
                     fileName: "src/App.js",
-                    lineNumber: 12
+                    lineNumber: 13
                 },
                 __self: undefined
             })
@@ -22773,7 +22774,20 @@ const App = ()=>{
     }));
 };
 _c = App;
-exports.default = App;
+exports.default = App; // Above is the same thing as:
+ /* ES5 function way
+
+export default function App() {
+    return (
+    <div>
+      <h1>This App</h1>
+      <Button1/>
+      <Button2/>
+    </div>
+  );
+}
+
+*/ 
 var _c;
 $RefreshReg$(_c, "App");
 
@@ -22945,28 +22959,14 @@ var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 class Button2 extends _reactDefault.default.Component {
-    constructor(){
-        super();
-        this.state = {
-            isClicked: false
-        };
-        // bind
-        this.handleClick = this.handleClick.bind(this);
-    }
-    // click handler
-    handleClick() {
-        this.setState({
-            isClicked: true
-        });
-    }
     render() {
-        if (this.state.isClicked === true) alert('Clicked Button2');
         return(/*#__PURE__*/ _jsxRuntime.jsx("button", {
             className: "btn2",
-            onClick: this.handleClick,
+            onClick: ()=>alert('clicked Button2')
+            ,
             __source: {
                 fileName: "src/components/Button2.js",
-                lineNumber: 26
+                lineNumber: 7
             },
             __self: this,
             children: "class component"
@@ -22992,10 +22992,10 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-// Function component
+// Function component 
 const Button1 = ()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsx("button", {
-        onClicked: ()=>alert('clicked Button1')
+        onClick: ()=>alert('clicked Button1')
         ,
         className: "btn",
         __source: {
