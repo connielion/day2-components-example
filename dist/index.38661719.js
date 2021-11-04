@@ -23041,7 +23041,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 // List is a class component with "state"
 class List extends _reactDefault.default.Component {
     constructor(){
-        // 'this' keyword is not allowed before super()
+        // 'this' keyword is not allowed before super(); check here for more info - https://stackoverflow.com/questions/40433463/what-does-calling-super-in-a-react-constructor-do
         super();
         // initialize "state" here
         this.state = {
