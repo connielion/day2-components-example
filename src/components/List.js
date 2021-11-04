@@ -1,10 +1,11 @@
 import React from "react";
 
+// List is a class component with "state"
 class List extends React.Component {
   constructor() {
     // 'this' keyword is not allowed before super()
     super();
-    // initialize state here
+    // initialize "state" here
     this.state = {
       someData: [1, 2, 3, "a", "b"],
     };

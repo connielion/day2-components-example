@@ -23038,11 +23038,12 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+// List is a class component with "state"
 class List extends _reactDefault.default.Component {
     constructor(){
         // 'this' keyword is not allowed before super()
         super();
-        // initialize state here
+        // initialize "state" here
         this.state = {
             someData: [
                 1,
@@ -23062,7 +23063,7 @@ class List extends _reactDefault.default.Component {
             return(/*#__PURE__*/ _jsxRuntime.jsx("li", {
                 __source: {
                     fileName: "src/components/List.js",
-                    lineNumber: 20
+                    lineNumber: 21
                 },
                 __self: this,
                 children: element
@@ -23074,7 +23075,7 @@ class List extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                     __source: {
                         fileName: "src/components/List.js",
-                        lineNumber: 28
+                        lineNumber: 29
                     },
                     __self: this,
                     children: "List Component"
@@ -23082,7 +23083,7 @@ class List extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("ul", {
                     __source: {
                         fileName: "src/components/List.js",
-                        lineNumber: 30
+                        lineNumber: 31
                     },
                     __self: this,
                     children: nums
