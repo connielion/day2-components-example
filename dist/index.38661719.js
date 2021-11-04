@@ -22739,9 +22739,12 @@ var _button2Default = parcelHelpers.interopDefault(_button2);
 var _button1 = require("./components/Button1"); // a function component
 var _button1Default = parcelHelpers.interopDefault(_button1);
 var _appCss = require("./App.css");
+var _list = require("./components/List"); // class component with "state"
+var _listDefault = parcelHelpers.interopDefault(_list);
 // Arrow function way
 const App = ()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        className: "app",
         __source: {
             fileName: "src/App.js",
             lineNumber: 10
@@ -22754,7 +22757,7 @@ const App = ()=>{
                     lineNumber: 11
                 },
                 __self: undefined,
-                children: "This is App"
+                children: "Inside App's render"
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_button1Default.default, {
                 __source: {
@@ -22767,6 +22770,13 @@ const App = ()=>{
                 __source: {
                     fileName: "src/App.js",
                     lineNumber: 13
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx(_listDefault.default, {
+                __source: {
+                    fileName: "src/App.js",
+                    lineNumber: 14
                 },
                 __self: undefined
             })
@@ -22796,7 +22806,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6Ds2u","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","./App.css":"l08wk","./components/Button2":"9H85T","./components/Button1":"itg8S"}],"ciiiV":[function(require,module,exports) {
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","./App.css":"l08wk","./components/Button2":"9H85T","./components/Button1":"itg8S","./components/List":"g1rCc"}],"ciiiV":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -23012,6 +23022,78 @@ var _c;
 $RefreshReg$(_c, "Button1");
 
   $parcel$ReactRefreshHelpers$543b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13"}],"g1rCc":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$be82 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$be82.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class List extends _reactDefault.default.Component {
+    constructor(){
+        // 'this' keyword is not allowed before super()
+        super();
+        // initialize state here
+        this.state = {
+            someData: [
+                1,
+                2,
+                3,
+                "a",
+                "b"
+            ]
+        };
+    }
+    render() {
+        // console.log('React.Component:', React.Component)
+        console.log("'this' is referring to: ", this);
+        const { someData  } = this.state; // destructure numbersList from the "state" object initialized above, so I don't have to type "this.state.someData.map(...)" on line 18
+        // for each number(element) in the array, return a <li> with the number(element) inside.
+        const nums = someData.map((element)=>{
+            return(/*#__PURE__*/ _jsxRuntime.jsx("li", {
+                __source: {
+                    fileName: "src/components/List.js",
+                    lineNumber: 20
+                },
+                __self: this,
+                children: element
+            }));
+        });
+        console.log(`nums`, nums);
+        return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                    __source: {
+                        fileName: "src/components/List.js",
+                        lineNumber: 28
+                    },
+                    __self: this,
+                    children: "List Component"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("ul", {
+                    __source: {
+                        fileName: "src/components/List.js",
+                        lineNumber: 30
+                    },
+                    __self: this,
+                    children: nums
+                })
+            ]
+        }));
+    }
+}
+exports.default = List;
+
+  $parcel$ReactRefreshHelpers$be82.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
