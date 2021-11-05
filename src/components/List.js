@@ -13,7 +13,7 @@ class List extends React.Component {
 
   render() {
     // console.log('React.Component:', React.Component)
-    console.log("'this' is referring to: ", this)
+    // console.log("'this' is referring to: ", this)
     const { someData } = this.state; // destructure numbersList from the "state" object initialized above, so I don't have to type "this.state.someData.map(...)" on line 18
 
     // for each number(element) in the array, return a <li> with the number(element) inside.

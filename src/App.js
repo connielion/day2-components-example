@@ -32,4 +32,12 @@ export default function App() {
   );
 }
 
+or 
+
+function App(){
+  // returns the same content as above
+}
+
+export default App;
+
 */
