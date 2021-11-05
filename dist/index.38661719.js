@@ -23038,6 +23038,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _button = require("./Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
 // List is a class component with "state"
 class List extends _reactDefault.default.Component {
     constructor(){
@@ -23059,7 +23061,7 @@ class List extends _reactDefault.default.Component {
         console.log("'this' is referring to: ", this);
         const { someData  } = this.state; // destructure numbersList from the "state" object initialized above, so I don't have to type "this.state.someData.map(...)" on line 18
         // for each number(element) in the array, return a <li> with the number(element) inside.
-        const nums = someData.map((element)=>{
+        const listElements = someData.map((element)=>{
             return(/*#__PURE__*/ _jsxRuntime.jsx("li", {
                 __source: {
                     fileName: "src/components/List.js",
@@ -23069,13 +23071,23 @@ class List extends _reactDefault.default.Component {
                 children: element
             }));
         });
-        console.log(`nums`, nums);
+        // console.log(`nums`,nums)
+        const buttons = someData.map((element)=>{
+            return(/*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
+                element: element,
+                __source: {
+                    fileName: "src/components/List.js",
+                    lineNumber: 27
+                },
+                __self: this
+            }));
+        });
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
             children: [
                 /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                     __source: {
                         fileName: "src/components/List.js",
-                        lineNumber: 29
+                        lineNumber: 32
                     },
                     __self: this,
                     children: "List Component"
@@ -23083,10 +23095,26 @@ class List extends _reactDefault.default.Component {
                 /*#__PURE__*/ _jsxRuntime.jsx("ul", {
                     __source: {
                         fileName: "src/components/List.js",
-                        lineNumber: 31
+                        lineNumber: 34
                     },
                     __self: this,
-                    children: nums
+                    children: listElements
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("h3", {
+                    __source: {
+                        fileName: "src/components/List.js",
+                        lineNumber: 36
+                    },
+                    __self: this,
+                    children: "Buttons list rendered by List Component"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("ul", {
+                    __source: {
+                        fileName: "src/components/List.js",
+                        lineNumber: 37
+                    },
+                    __self: this,
+                    children: buttons
                 })
             ]
         }));
@@ -23095,6 +23123,40 @@ class List extends _reactDefault.default.Component {
 exports.default = List;
 
   $parcel$ReactRefreshHelpers$be82.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6Ds2u","react":"4mchR","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"9pz13","./Button":"joi5I"}],"joi5I":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d557 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d557.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+// props is an 'object' you pass DOWN unidirectionally from parent to child components
+// child component must receive "props" parameter to access data passed down 
+const Button = (props)=>{
+    return(/*#__PURE__*/ _jsxRuntime.jsx("button", {
+        __source: {
+            fileName: "src/components/Button.js",
+            lineNumber: 6
+        },
+        __self: undefined,
+        children: props.element
+    }));
+};
+_c = Button;
+exports.default = Button;
+var _c;
+$RefreshReg$(_c, "Button");
+
+  $parcel$ReactRefreshHelpers$d557.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
